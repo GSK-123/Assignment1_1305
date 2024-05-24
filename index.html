@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sortable and Filterable Table</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 p-10">
+  <div class="container mx-auto">
+    <div class="flex justify-between mb-4">
+      <button id="sortButton" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Sort by Name</button>
+      <input type="text" id="searchInput" placeholder="Search by name..." class="px-4 py-2 border rounded">
+      <select id="categoryFilter" class="px-4 py-2 border rounded">
+        <option value="">All Categories</option>
+        <option value="Fruits">Fruits</option>
+        <option value="Vegetables">Vegetables</option>
+        <option value="Bakery">Bakery</option>
+      </select>
+    </div>
+    <table class="min-w-full bg-white border border-gray-300">
+      <thead>
+        <tr>
+          <th class="py-2 px-4 border-b">Name</th>
+          <th class="py-2 px-4 border-b">Price</th>
+          <th class="py-2 px-4 border-b">Description</th>
+          <th class="py-2 px-4 border-b">Nutrition</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
